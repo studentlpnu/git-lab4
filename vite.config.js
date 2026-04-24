@@ -46,11 +46,17 @@ export default defineConfig(({ command }) => {
         sort: 'mobile-first',
       }),
     ],
-    // --- НАЛАШТУВАННЯ ДЛЯ ЛАБ 2 ---
     test: {
       globals: true,
       environment: 'jsdom',
       setupFiles: './setupTests.js',
+      exclude: [
+        '**/node_modules/**',
+        '**/dist/**',
+        '**/cypress/**',
+        '**/.{idea,git,cache,output,temp}/**',
+        '**/*.spec.js' // ігнорує e2e.spec.js
+      ],
       coverage: {
         provider: 'v8',
         reporter: ['text', 'json', 'html'],
