@@ -50,7 +50,7 @@ describe('Тестування MVP: Pixabay API та Рендеринг', () => 
     await api.fetchImages('  red  car  ');
 
     const calledUrl = axios.get.mock.calls[0][0];
-    expect(calledUrl).toContain('q=  red  car  ');
+    expect(calledUrl).toContain('q=%20%20red%20%20car%20%20');
   });
 
   // 5. Симуляція затримки
