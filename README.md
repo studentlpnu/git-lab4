@@ -6,7 +6,7 @@ The goal of this MVP is to provide users with a clean, high-performance interfac
 to search and explore digital assets without social distractions.
 
 ### Core Features:
-- **Instant Search:** Query the global image database.
+- **Instant Search:** Query the image database.
 - **Visual Grid:** Responsive, clean masonry-style gallery.
 - **Infinite Discovery:** "Load More" functionality for continuous browsing.
 - **Dark Mode UI:** Professional dark-themed aesthetic.
