@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediaVision | Explorer</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="dark-theme">
+    <nav class="top-navigation">
+      <div class="brand-logo">Media<span>Vision</span></div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Discover</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1>Your Digital Archive</h1>
+        <p>Unlock inspiration of visual masterpieces</p>
+      </div>
+    </header>
+
+    <main class="app-container">
+      <div
+        style="
+          text-align: center;
+          margin-bottom: 20px;
+          font-family: 'Orbitron', sans-serif;
+        "
+      >
+        <span style="color: #888">System Mode:</span>
+        <span
+          id="env-status"
+          style="
+            padding: 4px 10px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+          "
+        ></span>
+      </div>
+
+      <section class="control-panel">
+        <form class="search-form query-wrapper">
+          <div class="input-group">
+            <input
+              type="text"
+              id="search-query"
+              class="search-input custom-field"
+              placeholder="Enter keywords..."
+              required
+            />
+            <button type="submit" class="btn-submit">Search</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="results-area">
+        <div class="loading status-overlay">
+          <div class="loader pulse-ring"></div>
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="gallery collection-grid"></div>
+        <div class="action-footer">
+          <button type="button" class="load-more btn-secondary">
+            Load more results
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>&copy; 2026 MediaVision API Explorer. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

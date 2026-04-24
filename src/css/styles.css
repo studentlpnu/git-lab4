@@ -1,0 +1,209 @@
+:root {
+    --bg-color: #0f172a;
+    --accent-color: #00f2ff;
+    --card-bg: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --grad: linear-gradient(135deg, #00f2ff 0%, #7000ff 100%);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Навігація */
+.top-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    background: rgba(16, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.brand-logo span {
+    color: #00f2ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 4rem 10%;
+    text-align: center;
+    background: radial-gradient(circle at top right, #1e1b4b, transparent);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Форма пошуку */
+.search-form {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.input-group {
+    display: flex;
+    background: var(--card-bg);
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.custom-field {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    outline: none;
+}
+
+.btn-submit {
+    background: var(--grad);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-submit:hover {
+    transform: scale(1.05);
+}
+
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 5%;
+}
+
+.gallery-item {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: 1px solid #334155;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Інфо про картинку */
+.image-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    background: rgba(0,0,0,0.2);
+}
+
+.image-info p {
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.image-info p span {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Лоадер */
+.loading {
+    display: none; /* Керується через JS */
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0, 242, 255, 0.1);
+    border-top: 3px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Кнопка "Load More" */
+.load-more {
+    display: none; /* Керується через JS */
+    margin: 3rem auto;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.load-more:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.main-footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid #334155;
+    margin-top: 4rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
