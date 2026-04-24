@@ -10,6 +10,8 @@ jobs:
   build-and-test:
     # 1. Використання Linux (Ubuntu) як віртуальну машину
     runs-on: ubuntu-latest
+    env:
+      VITE_PIXABAY_KEY: ${{ secrets.VITE_PIXABAY_KEY }}
 
     steps:
       # Крок 1: Копіювання коду репозиторію на віртуальну машину
