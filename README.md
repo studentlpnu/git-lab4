@@ -1,3 +1,5 @@
+[![CI/CD Pipeline](https://github.com/studentlpnu/git-lab4/actions/workflows/ci-cd.yml/badge.svg?branch=main)](https://github.com/studentlpnu/git-lab4/actions/workflows/ci-cd.yml)
+Live Demo: [MediaVision App](https://git-lab4-760wbv3cy-studentlpnus-projects.vercel.app)
 # MediaVision | Digital Archive Explorer
 
 ## Project Idea (MVP)
@@ -14,4 +16,4 @@ to search and explore digital assets without social distractions.
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/studentlpnu/git-lab1.git](https://github.com/studentlpnu/git-lab1.git)
+   git clone [https://github.com/studentlpnu/git-lab4.git](https://github.com/studentlpnu/git-lab4.git)
